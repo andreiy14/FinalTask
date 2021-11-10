@@ -1,0 +1,266 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ 
+@font-face {
+    font-family: circular-book;
+    src: url(../fonts/CircularStd-Book.otf);
+}
+@font-face {
+    font-family: circular-bold ;
+    src: url(../fonts/CircularStd-Bold.otf);
+}
+
+.smalltext{
+    font-size: 0.8rem;
+}
+
+body{
+    font-family: circular-book;
+    background-color: rgb(44, 38, 38);
+}
+
+
+.app{
+    height: 100vh;
+    background-color: #131313;
+    display: flex;
+}
+.outer-wrap{
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    height: 100vh;
+    min-height: 100%;
+
+}
+
+.navbar{
+    width: 270px;
+    height: 100%;
+    background: #040404;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;    
+}
+.navbar .logo{
+    
+    padding: 1rem 0.8rem;
+    
+}
+.logo svg{
+    margin-top: 15px;
+    max-width: 130px;
+}
+.logo p{
+    fill: white;
+}
+.navbar ul{
+    margin: 0;
+    padding: 0;
+}
+.navbar li{
+   
+    font-family: circular-bold;
+    color  : #b3b3b3;
+    list-style-type : none;
+    border-radius: 5px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+} 
+.navbar li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .active{
+    background: #282828;
+}
+.navbar li:hover{
+    color: white;
+}
+
+
+.cookies{
+    padding: 1rem;
+    color :#b3b3b3;
+    font-size: 0.6rem;
+    text-align: center;
+    margin-top: auto;
+    
+}
+.cookies span{
+    display: block;
+}
+
+.music-control{
+    background-color: #282828;
+    text-align: center;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+.image-onplay{
+    margin-left: 100px;
+
+}
+
+.music-control .image-onplay img{
+    width: 80px;
+    height: 70px;
+    
+}
+.music-control{
+    display: flex;
+    z-index: 1;
+}
+
+.icon-button .action-btn{
+    background-color:  #282828;
+    color:  #ffffff;
+     border  : 0;
+     font-size: 20px; 
+     padding: 10px;
+     margin   :  0  20px;
+    cursor : pointer;
+}
+.action-btn.action-btn-big{
+    font-size: 25px;
+    color: white;
+}
+.progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 50%;
+  }
+  
+  .progress-container .progress {
+    background-color: #13b913;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+
+
+.upper-nav{
+    width: 100%;
+    height: 56px;
+    background:rgba(9, 9, 9, 0.78);
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    
+    
+   
+    
+    
+}
+.upper-nav .register{
+    
+    background-color: green;
+    padding: 4px 6px;
+    margin-right: 2rem;
+    border-radius: 2px;
+}
+.upper-nav .login{
+    
+    background-color: green;
+    padding: 4px 6px;
+    margin-right: 2rem;
+    border-radius: 2px;
+}
+.upper-nav a{
+    color: white;
+    text-decoration: none;
+    padding: 4px 6px;
+    background-color: red;
+    margin-right: 12px;
+    
+}
+.upper-nav .img-avatar {
+    width: 50px;
+    height: 50px;
+    
+  }
+
+
+.main  {
+    width: 100%;
+    
+    position: relative;
+    padding-top: 3.4rem;
+}
+.main-contain{
+    color: white;
+    padding: 0.5rem 2rem;
+}
+.main-contain h1, h2{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    
+}
+
+.cards-wrap{
+    padding: 1.8rem;
+}
+
+.cards-wrap-inner{
+    display: flex;
+}
+.card{
+    background-color: #282828;
+    border-radius: 10px;
+    margin-right: 1.2rem;
+    width: 190px;
+    overflow: hidden;
+    padding: 1.2rem;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3),
+    0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+   
+}
+.card .play-icon:hover{
+    opacity: 1;
+}
+.card .card-image{
+    height: 160px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3),
+    0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.card-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card .card-content{
+  padding: 0.4rem  0;
+  
+
+}
+.card-content h3{
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    letter-spacing: 0.6px;
+}
+.card-content span{
+    font-size: 0.8rem;
+    color: #b3b3b3;
+}

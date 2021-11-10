@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{!-- <link rel="stylesheet" href="/public/css/all.min.css">
+      <link rel="stylesheet" href="/public/css/fontawesome.min.css"> --}}
+    <link rel="stylesheet" href="/public/style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="main">
+             <div class="upper-nav">
+                 <span><a href="/add">Add</a></span>
+                
+             </div>
+             <div class="main-contain">
+       
+        <div class="cards-wrap"  >
+               <h1>Uniq</h1>
+            <div class="cards-wrap-inner"> 
+                 {{#each data}}
+                <div class="card" >
+                <div class="card-image">
+                    <img src="{{this.photo}}" alt="image">
+                </div>
+                
+                <div class="card-content">
+                    <h3>{{this.name}}</h3>
+                    <span ><a style="text-decoration: none; color:aliceblue;" href="/heroes/{{this.id}}">Detail</a></span>
+                </div>
+              
+                
+                
+                </div>
+                    {{/each}}
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styleAdd.css">
+    <title>artist</title>
+</head>
+<body>
+    <div class="add-artist">
+        
+        <form action="/edit-heroes" method="POST" enctype="multipart/form-data" >
+        <input type="text" name="name" placeholder="Name" value="{{data.name}}">
+        <input type="number" value="{{data.type_id}}" id="quantity" name="type_id" placeholder="start from 2 = fighter, 3 = Support, 4 = assasin ">
+        <input type="hidden" name="oldImage" value="{{data.photo}}">
+         <input type="hidden" name="urlThumb" id="urlThumb" value="{{data.photo}}">
+          <input type="hidden" value="{{data.id}}" name="id">
+        <div class="file-input-group text-start">
+            
+            <input type="file" name="photo" onchange="handleChange()" id="file" class="visuallyhidden" >
+                <label for="file">choose pict</label>
+            <div id="preview-thumbnail"></div>
+        </div>
+       
+  
+            
+            <button>add</button>
+
+        </form>
+    </div>
+
+    <script>
+         const urlThumbnail = document.getElementById('urlThumb').value;
+        const previewElement = document.getElementById('preview-thumbnail')
+         previewElement.innerHTML = `<img src=${urlThumbnail} style="width:250px; margin-left: 170px;" class="mb-3" />`
+    function handleChange() {
+        
+        
+        const value = URL.createObjectURL(event.target.files[0])
+        
+        previewElement.innerHTML = `<img src=${value} style="width:250px; margin-left: 170px;" class="mb-3" />`
+    }
+</script>
+</body>
+
+</html>
